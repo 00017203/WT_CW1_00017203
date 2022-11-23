@@ -5,3 +5,5 @@ This readme file has been made to briefly explain the whole idea of the project 
 Basically. this Adidas website will consist of different pages such as the homepage, news page, shop, a specific page that shows information and also an area where the user can possibly register. All these different pages are divided into separate HTML files with unique designs in their singular CSS files. JavaScript is also incorporated in each single file. 
 
 Once all this is complete, there will be a specific folder inside that contains all media such as the required photos that can and will be used in all these different files, such as logos and icons. All media chosen are jpg or png files and are related to adidas.
+
+Link: https://00017203.github.io/WT_CW1_00017203/
