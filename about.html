@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adidas - About Us</title>
+	<link rel="stylesheet" type="text/css" href="aboutstyle.css">
+</head>
+<body>
+<header>   
+
+	<img class=ADIDAS-logo src="images/adidaslogo.png">   
+	<dif class=phone><img class=Phone_icon src="images/phoneicon.png"><a class=phone_info>+998(8)712**009*<br>
+	Open normally until 10PM</a></dif>
+	<dif class=mail><img class=mail_icon src="./images/mailicon.png"><a class=mail_info> info@adidas.uz<br>
+Sports ​​Wear Stores</a>
+<dif class="registration"><a href="registration.html">Registration</a></dif></dif>
+</header>
+<div class="container"> 
+	<form class="searchbar">
+		<input type="text" placeholder="Search"  name="q"> <button type="submit"><img src="images/searchbutton.png"></button>
+	</form>
+	<a href="index.html" class="Home"><img src="images/homeicon.png">HOME</a>
+	<a href="shop.html" class="Shop">SHOP</a>
+	<a href="news.html" class="News">NEWS</a>
+		<!-- it is an accordion! -->
+	<div class="About"><p href="" >ABOUT US ↓</p><div  class="accordion"><ul><a href="about.html">Information</a><br><br>
+		<a href="about.html"></a><br><br>
+		<a href="about.html"></a></ul></div>
+
+
+</div></div>
+<div class="main">
+<br><br><br>
+<h3>Adidas AG (adidas) designs, manufactures and markets athletic and sports lifestyle products. The company's product portfolio includes footwear, apparel and accessories such as bags, sun glasses, fitness equipment, and balls.</h3>
+<div class="text"><p>Adidas was founded in 1924 in Germany. Its headquarters are now located in Herzogenaurach, Germany. Adidas specializes in the industry of footwear and textile related to all genders, sizes and sports. Thomas Rabe is the current chairman of the company.</p>
+<p>In 2018, it was reported that Adidas had a total revenue of almost 22 billion USD. </p>
+
+<p>Adidas manufactures a range of clothing items, varying from men's and women's t-shirts, jackets, hoodies, pants and leggings.
+
+The main focus of Adidas has always been football kits, remaining a major company in the global supply of kits for international football teams and clubs.</p>
+
+<p>Our mission
+The purpose of creating and expanding the network of sportwear of Adidas
+ - to make our customers comfortable in their footwear and
+ for extra insurance in sport.
+</p>
+<p>
+Adidas values its image, obligations and fulfillments
+to employees, partners and states, which in return
+sets high business standards.</p>
+
+<div class="main-scroll">
+	<div> <button class="icon_left" onclick="scrollr()"><</button></div>
+	<div class="cover">
+		<div class="scroll-images">
+			<!-- Slideshow of images to scroll through. -->
+			<div class="child"><img class="child-img" src="images/news1.png"></div>
+			<div class="child"><img class="child-img" src="images/ultraboost.jpg"></div>
+			<div class="child"><img class="child-img" src="images/kidsshoes.png"></div>
+			<div class="child"><img class="child-img" src="images/adidasslogan2.jpg"></div>
+			<div class="child"><img class="child-img" src="images/adidasslogan3.png"></div>
+			<div class="child"><img class="child-img" src="images/adidasslogan4.png"></div>
+			<div class="child"><img class="child-img" src="images/adidas2.png"></div>
+			<div class="child"><img class="child-img" src="images/adidas3.png"></div>
+		</div>
+	</div>
+	<div> <button class="icon_right" onclick="scrolll()">> </button></div>
+</div>
+
+
+</div>
+<div class="images1"><img src="images/news1.png">
+</div>
+</div>
+<footer>
+	<div class="row1">
+	<img src="images/adidaslogo.png">
+	<p>"This website was created to fulfill Web Technology 
+module’s requirements and does not represent an actual company or service."</p>
+	</div>
+	<div class="row2">
+		<h3>Nav Bar</h3>
+		<a href="index.html">Home</a><br><br>
+		<a href="shop.html">Shop</a><br><br>
+		<a href="news.html" >News</a><br><br>
+		<a href="about.html">About Us</a><br><br>
+
+
+	</div>
+	<div class="row3">
+		<h3>Store Location</h3>
+		<p>60 Amir Temur Avenue, Tashkent</p><br>
+
+	</div>
+	<div class="row4">
+		<h3>Social Links</h3>
+		<a href="#"><img src="images/twitter.png" ></a>
+		<a href="#"><img src="images/facebook.jpg" ></a>
+		
+	</div>
+</footer>
+</body>
+
+<!-- Javascript for About. -->
+<script type="text/javascript">
+	function scrolll() {
+		var left=document.querySelector(".scroll-images");
+		left.scrollBy(850, 0)
+	}
+	function scrollr() {
+		var right=document.querySelector(".scroll-images");
+		right.scrollBy(-850, 0)
+	}
+
+	const About = document.getElementsByClassName('About');
+	const accordion = document.getElementsByClassName('accordion');
+
+	for (i = 0; i<About.length; i++){
+		About[i].addEventListener('click',function(){
+			this.classList.toggle('active')
+		})
+	}
+</script>
+
+</html>

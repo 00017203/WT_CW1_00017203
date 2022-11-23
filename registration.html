@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adidas - Register</title>
+	<link rel="stylesheet" type="text/css" href="regstyle.css">
+</head>
+<body>
+<header>   
+	<img class=ADIDAS-logo src="images/adidaslogo.png">   
+	<dif class=phone><img class=Phone_icon src="images/phoneicon.png"><a class=phone_info>+998(8)712**009*<br>
+	Open normally until 10PM</a></dif>
+	<dif class=mail><img class=mail_icon src="images/mailicon.png"><a class=mail_info> info@adidas.uz<br>
+Sports ​​Wear Stores</a>
+<dif class="registration"><a href="registration.html">Registration</a></dif></dif>
+</header>
+<div class="container"> 
+	<form class="searchbar">
+		<input type="text" placeholder="Search"  name="q"> <button type="submit"><img src="images/searchbutton.png"></button>
+	</form>
+	<a href="index.html" class="Home"><img src="images/homeicon.png">HOME</a>
+	<a href="shop.html" class="Shop">SHOP</a>
+	<a href="news.html" class="News">NEWS</a>
+		<!-- it is an accordion! -->
+	<div class="About"><p href="" >ABOUT US ↓</p><div  class="accordion"><ul><a href="about.html">Information</a><br><br>
+		<a href="about.html"></a><br><br>
+		<a href="about.html"></a></ul></div>
+
+<!-- A registration form. -->
+
+</div></div>
+<div class="registrationW">
+	<form id="form" action="/">
+		<h1>Registration</h1>
+		<div class="input-control">
+			<label for="username">Username</label>
+			<input id="username" type="text" name="username" >
+			<!-- If error occures. -->
+			<div class="error"></div>
+		</div>
+		<div class="input-control">
+			<label for="email">Email</label>
+			<input id="email" type="text" name="username">
+			<div class="error"></div>
+		</div>
+		<div class="input-control">
+			<label for="password">Password</label>
+			<input id="password" type="password" name="password">
+			<div class="error"></div>
+		</div>
+		<div class="input-control">
+			<label for="password">Password again</label>
+			<input id="password2" type="password" name="password2">
+			<div class="error"></div>
+		</div>
+		<button type="submit"> Register </button>
+	</form>
+	
+</div>
+
+<footer>
+	<div class="row1">
+	<img src="images/adidaslogo.png">
+	<p>"This website was created to fulfill Web Technology 
+module’s requirements and does not represent an actual company or service."</p>
+	</div>
+	<div class="row2">
+		<h3>Nav Bar</h3>
+		<a href="index.html">Home</a><br><br>
+		<a href="shop.html">Shop</a><br><br>
+		<a href="news.html" >News</a><br><br>
+		<a href="about.html">About Us</a><br><br>
+
+
+	</div>
+	<div class="row3">
+		<h3>Store Locations</h3>
+		<p>60 Amir Temur Avenue, Tashkent</p><br>
+
+	</div>
+	<div class="row4">
+		<h3>Social Links</h3>
+		<a href="#"><img src="images/twitter.png" ></a>
+		<a href="#"><img src="images/instagram.png" ></a>
+		
+	</div>
+</footer>
+</body>
+<script type="text/javascript">
+	
+
+	const About = document.getElementsByClassName('About');
+	const accordion = document.getElementsByClassName('accordion');
+
+	for (i = 0; i<About.length; i++){
+		About[i].addEventListener('click',function(){
+			this.classList.toggle('active')
+		})
+	}
+
+</script>
+<!-- Javascript. -->
+<script type="text/javascript">const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs();
+});
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const validateInputs = () => {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+    const password2Value = password2.value.trim();
+
+    if(usernameValue === '') {
+        setError(username, 'Username is required');
+    } else {
+        setSuccess(username);
+    }
+
+    if(emailValue === '') {
+        setError(email, 'Email is required');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+    } else {
+        setSuccess(email);
+    }
+
+    if(passwordValue === '') {
+        setError(password, 'Password is required');
+    } else if (passwordValue.length < 8 ) {
+        setError(password, 'Password must be at least 8 character.')
+    } else {
+        setSuccess(password);
+    }
+
+    if(password2Value === '') {
+        setError(password2, 'Please confirm your password');
+    } else if (password2Value !== passwordValue) {
+        setError(password2, "Passwords doesn't match");
+    } else {
+        setSuccess(password2);
+    }
+
+};
+</script>
+
+</html>

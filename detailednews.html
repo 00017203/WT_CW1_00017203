@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adidas - Continue Reading</title>
+	<link rel="stylesheet" type="text/css" href="detailednews.css">
+</head>
+<body>
+<header>   
+	<img class=ADIDAS-logo src="images/adidaslogo.png">   
+	<dif class=phone><img class=Phone_icon src="images/phoneicon.png"><a class=phone_info>+998(8)712**009*<br>
+	Open normally until 10PM</a></dif>
+	<dif class=mail><img class=mail_icon src="images/mailicon.png"><a class=mail_info> info@adidas.uz<br>
+Sports ​​Wear Stores</a>
+<dif class="registration"><a href="registration.html">Registration</a></dif></dif>
+</header>
+<!-- Searchbar included, without working though. -->
+<div class="container"> 
+	<form class="searchbar">
+		<input type="text" placeholder="Search"  name="q"> <button type="submit"><img src="images/searchbutton.png"></button>
+	</form>
+	<a href="index.html" class="Home"><img src="images/homeicon.png">HOME</a>
+	<a href="shop.html" class="Shop">SHOP</a>
+	<a href="news.html" class="News">NEWS</a>
+		<!-- it is an accordion! -->
+	<div class="About"><p href="" >ABOUT US ↓</p><div  class="accordion"><ul><a href="about.html">Information</a><br><br>
+		<a href="about.html"></a><br><br>
+		<a href="about.html"></a></ul></div>
+
+</div></div>
+
+<!-- Follow up page for news. -->
+<div class="main">
+	<img src="images/news1.png">
+	<div class="text">
+		<h2>"Al Rihla" Ball unveiled as the official match ball for the FIFA World Cup this year in Qatar!</h2>
+		<p class="info">30.03.2022</p>
+
+		<p>Adidas has unveiled its official 'Al Rihla' match ball for the 2022 World Cup, which the company claims to be the fastest ball "in flight" in the history of the competition.
+<br><br><br>
+This new ball is reported to be of a higher quality than both the Jabulani and the Brazuca, which were both the official match balls of both the 2010 and 2014 World Cups, which took place in South Africa and Brazil.
+<br><br>
+For more information check out our phone number and website.<br><br>
+Phone: 8 712** 009*<br><br>
+Organization website: adidas.uz</p>
+	</div>
+</div>
+
+
+
+<footer>
+	<div class="row1">
+	<img src="images/adidaslogo.png">
+	<p>"This website was created to fulfill Web Technology 
+module’s requirements and does not represent an actual company or service."</p>
+	</div>
+	<div class="row2">
+		<h3>Nav Bar</h3>
+		<a href="index.html">Home</a><br><br>
+		<a href="shop.html">Shop</a><br><br>
+		<a href="news.html" >News</a><br><br>
+		<a href="about.html">About Us</a><br><br>
+
+	</div>
+	<div class="row3">
+		<h3>Store Location</h3>
+		<p>60 Amir Temur Avenue, Tashkent</p><br>
+
+	</div>
+	<div class="row4">
+		<h3>Social Links</h3>
+		<a href="#"><img src="images/twitter.png" ></a>
+		<a href="#"><img src="images/facebook.jpg" ></a>
+		
+	</div>
+</footer>
+</body>
+
+<!-- Javascript for Continue Reading. -->
+<script type="text/javascript">
+	
+
+	const About = document.getElementsByClassName('About');
+	const accordion = document.getElementsByClassName('accordion');
+
+	for (i = 0; i<About.length; i++){
+		About[i].addEventListener('click',function(){
+			this.classList.toggle('active')
+		})
+	}
+</script>
+
+</html>
